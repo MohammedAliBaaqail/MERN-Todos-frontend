@@ -15,7 +15,7 @@ export default function CompletedTodo({todo}) {
     const handleClick = async () => {
         setCompleted(!completed)
         setCompletedAt(completed ? todo.completedAt : new Date())
-        const response = await fetch(`https://mern-todos-backend.onrender.com/api/todos/${todo._id}`, {
+        const response = await fetch(`/api/todos/${todo._id}`, {
             method: 'PATCH',
             body: JSON.stringify({completed: !completed , completedAt: new Date()}),
             headers: {

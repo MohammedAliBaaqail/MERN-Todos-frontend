@@ -19,7 +19,7 @@ export default function EditTitle({todo}) {
           return;
         }
         const updetedTodo = { title };
-        const response = await fetch("https://mern-todos-backend.onrender.com/api/todos/" + todo._id, {
+        const response = await fetch("/api/todos/" + todo._id, {
           method: "PATCH",
           body: JSON.stringify(updetedTodo),
           headers: {

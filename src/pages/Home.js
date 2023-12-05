@@ -31,7 +31,7 @@ const Home = () => {
     }
     useEffect(() => {
       const fetchTodos = async () => {
-        const response = await fetch('https://mern-todos-backend.onrender.com/api/todos', {
+        const response = await fetch('/api/todos', {
           headers: {'Authorization': `Bearer ${user.token}`},
         })
         const json = await response.json()

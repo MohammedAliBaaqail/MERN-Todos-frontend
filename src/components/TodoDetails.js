@@ -40,7 +40,7 @@ const TodoDetails = ({ todo }) => {
       return;
     }
 
-    const response = await fetch("https://mern-todos-backend.onrender.com/api/todos/" + todo._id, {
+    const response = await fetch("/api/todos/" + todo._id, {
       method: "PATCH",
       body: JSON.stringify(updetedTodo),
       headers: {
@@ -71,7 +71,7 @@ const TodoDetails = ({ todo }) => {
 
     await sleep(500);
 
-    const response = await fetch("https://mern-todos-backend.onrender.com/api/todos/" + todo._id, {
+    const response = await fetch("/api/todos/" + todo._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,

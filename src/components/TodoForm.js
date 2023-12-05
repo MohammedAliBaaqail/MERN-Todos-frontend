@@ -24,7 +24,7 @@ const TodoForm = ({todo ,hanndleSearch}) => {
 
     const todo = {title, date, duration}
     
-    const response = await fetch('https://mern-todos-backend.onrender.com/api/todos', {
+    const response = await fetch('/api/todos', {
       method: 'POST',
       body: JSON.stringify(todo),
       headers: {
